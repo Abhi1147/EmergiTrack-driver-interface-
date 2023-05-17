@@ -1,0 +1,27 @@
+<%- include('header') -%>
+<div id="profile">
+    <div class="heading"><span style="color: white;"><%= hospitalName %></span></div>
+    <div id="line"></div>
+    <div>Your Driver Id is:- <span style="color: white;"> <%= driverId %></span></div>
+    <div style="color: orangered;margin-top: 2%;">Your Status is:- Working</div>
+    <div id="status-box">
+        <div class="status-item">
+            <div>patient Name:- <%= patientName %></div>
+            <div>patient Address:- <%= patientAddress %></div>
+            <div>patient Number:- <%= patientNum %></div>
+            <form action="/workingStatus" method="post" style="display: inline;">
+                <input name="driverId" value="<%= driverId %>" style="display: none;">
+                <input name="hospitalName" value="<%= hospitalName %>" style="display: none;">
+                <input name="hospitalAddress" value="<%= hospitalAddress %>" style="display: none;">
+                <input name="patientId" value="<%= patientId %>" style="display: none;">
+                <button type="submit">DONE</button>
+                
+            </form>
+            
+            <p style="color: white;margin-top: 15%;">As an ambulance driver with our organization, you will play a crucial role in the healthcare system, ensuring the safe and timely transport of patients in need. Your expertise and quick response are vital in emergency situations, and your professionalism and empathy bring comfort to patients and their families.</p>
+        </div>
+        <div class="status-item"><img src="driver.jpg"></div>
+    </div>
+</div>
+<%- include('contact') -%>
+<%- include('footer') -%>
