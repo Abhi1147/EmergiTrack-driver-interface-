@@ -5,6 +5,7 @@ const mongoose=require("mongoose");
 const axios = require('axios');
 const http=require("https");
 const State=require("country-state-city").State;
+const fetch=require("node-fetch");
 const { City } = require("country-state-city");
 const { ObjectId } = require('mongodb');
 require("dotenv").config();
